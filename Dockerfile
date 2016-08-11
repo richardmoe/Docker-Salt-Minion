@@ -10,15 +10,7 @@ RUN apt-get update && apt-get upgrade -y -o DPkg::Options::=--force-confold
 
 # Dependencies
 
-RUN apt-get install -y software-properties-common
-
-# Add the Salt Stack Repository
-
-RUN add-apt-repository -y ppa:saltstack/salt
-
-# Install Salt-Master and Salt Syndic
-
-RUN apt-get install -y salt-minion
+RUN apt-get install -y software-properties-common sudo salt-minion
 
 # Volumes
 
