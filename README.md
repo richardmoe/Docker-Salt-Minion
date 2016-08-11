@@ -1,4 +1,4 @@
-# Docker Salt-Minion
+# Docker Salt-Minion on Ubuntu 16.04
 
 A Docker Image for a Salt Minion. This image allows you to run a Salt Minion
 enabled server within a Docker container. This is designed for testing purposes
@@ -8,15 +8,15 @@ of Salt States contained within a Salt Master server.
 
 Simply run this docker command:
 
-    docker run --rm -it soon/salt-minion
+    docker run --rm -it richardmoe/salt-minion
 
 ## Linking to a Salt Master server
 
 You can link to a running Salt Master container by running the following
 docker command:
 
-    docker run -d soon/salt-master
-    docker run --rm -it --link salt-master:salt soon/salt-minion
+    docker run -d richardmoe/salt-master
+    docker run --rm -it --link salt-master:salt richardmoe/salt-minion
 
 ## Environment Variables
 
