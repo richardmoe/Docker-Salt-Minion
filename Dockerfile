@@ -2,8 +2,8 @@
 # Salt Stack Salt Master Container
 #
 
-FROM ubuntu:14.04
-MAINTAINER SOON_ <dorks@thisissoon.com>
+FROM ubuntu:16.04
+MAINTAINER richard moe <me@richard.moe>
 
 # Update System
 RUN apt-get update && apt-get upgrade -y -o DPkg::Options::=--force-confold
