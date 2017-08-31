@@ -8,7 +8,7 @@ of Salt States contained within a Salt Master server.
 
 Simply run this docker command:
 
-    docker run --rm -it richardmoe/salt-minion
+    docker run --rm -it richardmoe/docker-salt-minion
 
 ## Linking to a Salt Master server
 
@@ -16,7 +16,7 @@ You can link to a running Salt Master container by running the following
 docker command:
 
     docker run -d richardmoe/salt-master
-    docker run --rm -it --link salt-master:salt richardmoe/salt-minion
+    docker run --rm -it --link salt-master:salt richardmoe/docker-salt-minion
 
 ## Environment Variables
 
@@ -26,10 +26,11 @@ The following environment variables can be set:
 
 For example:
 
-    docker run --rm -it -e LOG_LEVEL=debug richardmoe/salt-minion
+    docker run --rm -it -e LOG_LEVEL=debug richardmoe/docker-salt-minion
 
 ## Custom Minion Configuration
 
 The image shares the `/etc/salt/minion.d` directory where you can place your
 own minion configuration. See the Salt Stack documentation for more on
 configuring a Salt Minion.
+
