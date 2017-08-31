@@ -26,7 +26,7 @@ The following environment variables can be set:
 
 For example:
 
-    docker run --rm -it -e LOG_LEVEL=debug soon/salt-minion
+    docker run --rm -it -e LOG_LEVEL=debug richardmoe/salt-minion
 
 ## Custom Minion Configuration
 
