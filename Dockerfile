@@ -2,7 +2,7 @@
 # Salt Stack Salt Master Container
 #
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER richard moe <me@richard.moe>
 
 # Update System
@@ -10,9 +10,9 @@ MAINTAINER richard moe <me@richard.moe>
 
 # Dependencies
 RUN apt-get update
-RUN apt-get -y install curl sudo
-RUN curl https://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
-RUN echo "deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/latest xenial main" >> /etc/apt/sources.list
+RUN apt-get -y install curl sudo gnupg
+RUN curl https://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+RUN echo "deb http://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest bionic main" >> /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y -o DPkg::Options::=--force-confold
 RUN apt-get install -y software-properties-common sudo salt-minion
 
